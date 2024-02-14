@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <div class="content">
+      <img alt="Vue logo" src="./assets/logo.png" class="logo">
+      <EmprestimoForm/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import EmprestimoForm from './components/EmprestimoForm.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    EmprestimoForm
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130vh; /* Ajuste conforme necessário */
+}
+
+.content {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+.logo {
+  margin-bottom: 1px; /* Espaçamento entre a imagem e o formulário */
 }
 </style>
